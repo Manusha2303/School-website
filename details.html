@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Learning School - Student Details</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <aside class="hero-panel">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="school-name">M Learning School</h1>
+        <p class="tagline">Student details overview in one place.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="top-bar">
+        <div class="logo-mark">M</div>
+        <div class="top-text">
+          <h2>Saved Student Details</h2>
+          <p>View all students that were entered on the registration page.</p>
+        </div>
+      </header>
+
+      <section class="card layout">
+        <div class="table-section">
+          <div class="table-header">
+            <h3>Students</h3>
+            <div class="table-actions">
+              <input type="search" id="searchInput" placeholder="Search by name, class, or section..." />
+              <a href="index.html" class="btn btn-outline">Back to Registration</a>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Class</th>
+                  <th>Section</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Parent</th>
+                  <th>Contact</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody id="studentsBody">
+                <!-- Filled by script -->
+              </tbody>
+            </table>
+
+            <div class="empty-state" id="emptyState">
+              <p>No students stored yet. Go back and add students from the registration page.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> M Learning School. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="details.js"></script>
+</body>
+</html>
+

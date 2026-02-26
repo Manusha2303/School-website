@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Learning School - Student Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <aside class="hero-panel">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="school-name">M Learning School</h1>
+        <p class="tagline">Where every student journey is beautifully organized.</p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Active Students</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">40</span>
+            <span class="stat-label">Teachers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Care & Support</span>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <div class="circle circle-lg"></div>
+          <div class="circle circle-md"></div>
+          <div class="circle circle-sm"></div>
+          <img
+            src="https://images.pexels.com/photos/8617820/pexels-photo-8617820.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Happy students in classroom"
+          />
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="top-bar">
+        <div class="logo-mark">M</div>
+        <div class="top-text">
+          <h2>Student Enrollment Portal</h2>
+          <p>Enter and securely store student details for M Learning School.</p>
+        </div>
+      </header>
+
+      <section class="card layout">
+        <div class="form-section">
+          <h3>Add New Student</h3>
+          <p class="section-subtitle">Fill out the form and click save to store the student details.</p>
+
+          <form id="student-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="studentName">Full Name</label>
+                <input type="text" id="studentName" name="studentName" placeholder="e.g. Priya Sharma" required />
+              </div>
+
+              <div class="field">
+                <label for="studentAge">Age</label>
+                <input type="number" id="studentAge" name="studentAge" min="3" max="20" placeholder="e.g. 13" required />
+              </div>
+
+              <div class="field">
+                <label for="studentClass">Class</label>
+                <select id="studentClass" name="studentClass" required>
+                  <option value="" disabled selected>Select class</option>
+                  <option value="Nursery">Nursery</option>
+                  <option value="KG">KG</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="studentSection">Section</label>
+                <input type="text" id="studentSection" name="studentSection" maxlength="2" placeholder="e.g. A" required />
+              </div>
+
+              <div class="field">
+                <label for="parentName">Parent / Guardian Name</label>
+                <input type="text" id="parentName" name="parentName" placeholder="e.g. Mr. Sharma" required />
+              </div>
+
+              <div class="field">
+                <label for="contactNumber">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="e.g. 9876543210" required />
+              </div>
+
+              <div class="field full-width">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="2" placeholder="House number, street, city" required></textarea>
+              </div>
+
+              <div class="field">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Select gender</option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn-ghost">Clear</button>
+              <button type="submit" class="btn btn-primary">Save Student</button>
+            </div>
+          </form>
+          <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+          <div class="details-link-wrapper">
+            <a href="details.html" class="btn btn-outline details-link">View Saved Students (Details)</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> M Learning School. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
